@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.box1 {
+    height: 30vh;
+    width: 20vw;
+    background-color: crimson;
+}
+
+.box2 {
+    height: 30vh;
+    width: 20vw;
+    background-color: coral;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    display: flex;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
