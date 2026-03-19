@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+
+<body>
+    <label for="name">Name:-</label>
+    <input type="text" id="name">
+    <button type="button" id="submit">submit</button>
+
+    <script>
+        var btn = document.querySelector('#submit');
+        var name1 = document.querySelector('#name');
+
+
+
+        function nameCheck() {
+            console.log(name1.value + "before conversion");
+            name1 = name1.value.split("");
+            console.log(name1.value + "after conversion");
+
+
+            name1.forEach((data) => {
+                if (data != "!" && data != "#" && data != "@" && data != "&") {
+                    console.log("the given Character dosen't contain any special" + data);
+                }
+                else {
+                    console.log("the current character is equal to one of the given special chaarcter" + data);
+                }
+            });
+            document.querySelector('#name1').value = ""
+        }
+
+        name1.addEventListener("keypress", (event) => {
+            if (event.key == 'Enter') {
+                nameCheck();
+            }
+        });
+        name1.addEventListener("input", (event) => {
+            console.log(event.target.value);
+        })
+        btn.addEventListener("dblclick", nameCheck);
+
+        btn.addEventListener('click', () => {
+            console.log("user had clicked and the name of the user is " + name1.value);
+            name1.value = "";
+        });
+
+    </script>
+</body>
+
+</html>

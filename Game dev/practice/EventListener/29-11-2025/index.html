@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body>
+
+    <h1>Click Button</h1>
+    <button type="button" id="loadPostsBtn">Posts</button>
+    <script>
+        var button = document.getElementById("loadPostsBtn");
+        var h1 = document.querySelector("h1");
+
+        var count = 0;
+
+        button.addEventListener("click", () => {
+            fetch("https://api.covid19india.org/data.json")
+                .then((response) => response.json())
+                .then((posts) => {
+                    var arr = posts.products;
+
+                    var timerId = setInterval(() => {
+                        ++count;
+                        if (count == 30) {
+                            clearInterval(timerId);
+                        }
+                        arr.forEach(element => {
+                            console.log(element);
+                        });
+                    }, 8000);
+                })
+
+                .catch((error) => {
+                    console.log("Error:", error);
+                })
+            h1.style.color = "red";
+        })
+    </script>
+</body>
+
+</html>

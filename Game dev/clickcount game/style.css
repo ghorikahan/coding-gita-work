@@ -1,0 +1,85 @@
+body {
+    background-color: blue;
+}
+
+h1 {
+    color: blue;
+}
+
+.container {
+    height: 90vh;
+    width: 30vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    gap: 1vw;
+    border-radius: 2vw;
+}
+
+.score-selection {
+    display: flex;
+    gap: 1vw;
+}
+
+.score-box {
+    color: white;
+    height: 13vh;
+    width: 12vw;
+    padding: 1vw;
+    background-color: blue;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score {
+    font-size: 2rem;
+}
+
+.timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer {
+    font-size: 3rem;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.click-btn {
+    height: 8vh;
+    width: 20vw;
+    border-radius: 1vw;
+    color: white;
+    background-color: grey;
+}
+
+.start-btn {
+    height: 5vh;
+    background-color: blue;
+    border-radius: 1vw;
+    color: white;
+}
+
+.reset-btn {
+    background-color: red;
+    color: white;
+    height: 2vw;
+    border-radius: 1vw;
+}
+
+.subtitle {
+    color: rgba(0, 0, 0, 0.639);
+}
