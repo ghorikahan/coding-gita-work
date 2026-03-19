@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 20vh;
+            width: 15vw;
+            background-color: blue;
+            border: .2rem solid blue;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width:450px) {
+            .row2 {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .row1 {
+            display: flex;
+            justify-content: space-between;
+            width: 90vw;
+            border: .2rem solid red;
+            padding: 2rem;
+            background-color: red;
+        }
+
+        .row2 {
+            display: flex;
+            margin-top: 2rem;
+            gap: 5em;
+        }
+
+        .row2col1 {
+            display: flex;
+            flex-direction: column;
+            border: .2rem solid red;
+            gap: 2rem;
+            padding: 2rem;
+            background-color: red;
+        }
+
+        .row2col2 {
+            display: flex;
+            flex-direction: column;
+            border: .2rem solid red;
+            gap: 2rem;
+            padding: 2rem;
+            background-color: red;
+        }
+
+        .row2col3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .2rem solid red;
+            padding: 2rem;
+            background-color: red;
+        }
+
+        .row2col2row1 {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .row2col2row2 {
+            display: flex;
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contsiner">
+        <div class="row1">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="row2">
+            <div class="row2col1">
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="row2col2">
+                <div class="row2col2row1">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="row2col2row2">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="row2col3">
+                <div class="box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
