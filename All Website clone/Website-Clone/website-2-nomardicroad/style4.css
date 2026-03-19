@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 2vw;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid; */
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    padding-top: 3vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+[alt="logo"] {
+    height: 3vh;
+}
+
+[alt="hambur"] {
+    height: 4vh;
+}
+
+[alt="backarrow"] {
+    height: 1.5vw;
+}
+
+.back {
+    display: flex;
+    gap: 1.5vw;
+}
+
+
+
+.heading {
+    font-size: 1.5rem;
+    padding-top: 2vw;
+    box-sizing: border-box;
+}
+
+.text {
+    padding-top: 2vw;
+    font-size: 1.4vw;
+}
+
+[alt="123"] {
+    height: 3vw;
+}
+
+[alt="abc"] {
+    height: 10vw;
+    padding-top: 2vw;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+}
+
+.mainicon {
+    padding-top: 2vw;
+}
+
+[alt="a2c"] {
+    height: 1.5vw;
+}
+
+.pages {
+    display: flex;
+    gap: 1.5vw;
+    padding-top: 2vw;
+}
+
+.copyright {
+    padding-top: 2vw;
+}
+
+.mainoffice {
+    padding-top: 2vw;
+}
+
+[alt="firstimg"] {
+    height: 95vh;
+    border-radius: 2vw;
+}
+
+.content {
+    width: 43vw;
+    padding-top: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.head {
+    padding-top: 2vw;
+}
+
+.content1 {
+    background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761277403/66c22cf40d91aa5e88f3f583_5_j1lag6.webp);
+    /* border: 2px solid; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    border-radius: 2vw;
+    /* padding: 1.5vw; */
+}
+
+.headingwhite {
+    color: white;
+}
+
+.innercontent {
+    color: white;
+    font-size: 1.1rem;
+    width: 30vw;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw;
+}
+
+.content2 {
+    background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761277415/66c22cf60d91aa5e88f3f696_10-2_c87uk6.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    border-radius: 2vw;
+}
+
+[alt="img"] {
+    height: 60vh;
+    border-radius: 2vw;
+    margin-top: 2vw;
+}
+
+[alt="img1"] {
+    height: 60vh;
+    width: 50vw;
+    background-repeat: no-repeat;
+    border-radius: 2vw;
+}
+
+.lastimg {
+    background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761277536/66c22cf70d91aa5e88f3f856_Nomadic_20Road_bblryf.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    border-radius: 2vw;
+    padding: 2vw;
+}
+
+.white {
+    color: white;
+}
+
+[alt="inquire"] {
+    height: 2vh;
+}
+
+.inquire {
+    display: flex;
+    gap: 1.5vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5vw;
+    background-color: black;
+    height: 5vh;
+    width: 15vw;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10vh;
+}
+
+.lineheight {
+    line-height: 3vw;
+    font-weight: bold;
+}
+
+.lastcopyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    margin: 2vw;
+}
+
+.policy {
+    display: flex;
+    gap: 2vw;
+}
+
+[href="index4.html"] {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

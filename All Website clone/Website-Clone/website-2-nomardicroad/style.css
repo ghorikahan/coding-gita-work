@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761112083/670f86c0f970ac4eb1eca601_Custom-Expedition-Page-Header-Horizontal-_1_sjgu3k.webp);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    padding: 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+[alt="logo"] {
+    height: 3vh;
+}
+
+[alt="hambur"] {
+    height: 4vh;
+}
+
+
+
+h1 {
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: .67em;
+}
+
+.sub-heading {
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 1.5em;
+}
+
+.letsbegin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 13vw;
+    border-radius: 5vw;
+    background-color: black;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-left: 2.3rem;
+}
+
+.color {
+    color: white;
+}
+
+[alt="123"] {
+    height: 2.5vh;
+}
+
+[href="index1.html"] {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

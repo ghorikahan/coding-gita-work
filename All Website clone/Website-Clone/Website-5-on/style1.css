@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 1000vh;
+}
+
+[href="index2.html"]{
+    text-decoration: none;
+    color: black;
+}
+
+.maincontent {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/6cxOe9Gtf2HPemiQBwBkUf/7d7d25f7c78cae26e28a7c09222ab277/fw25-on_x_shfg-pad-head_to_toe_still-300dpi-02.jpg?w=1920&h=1080&fm=avif&f=face&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* filter: brightness(95%); */
+    /* box-sizing: border-box; */
+}
+
+.nav-bar {
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+._logo_gk4wp_59._dark_gk4wp_65 {
+    color: black;
+    height: 10vh;
+    width: 10vw;
+}
+
+.nav-bar-middle-section {
+    color: black;
+    font-size: 1.7rem;
+    display: flex;
+    gap: 2vw;
+    font-weight: 600;
+}
+
+.nav-bar-search-section {
+    display: flex;
+    gap: 1.5vw;
+}
+
+.nav-bar-icons {
+    color: black;
+    height: 5vh;
+    width: 3vw;
+}
+
+.main-content {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/1EShRq3wElEl4oJpwElQ6k/958d9797625a975db18c6fcc69c6dd31/fw25-holiday-mix-head_to_toe_still-look_1-01.jpg?w=1920&h=1080&fm=avif&f=face&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 110vh;
+    width: 92vw;
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.main-content-text-content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    color: white;
+    padding: 3%;
+    gap: 2vw;
+}
+
+.main-content-text-content-big-text {
+    font-size: 3rem;
+    font-weight: 550;
+}
+
+.main-content-text-content-text-width {
+    font-size: 2rem;
+    width: 25vw;
+}
+
+.category-wise-shopping {
+    display: flex;
+    gap: 2vw;
+}
+
+.shopping-category-women-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7.5vh;
+    width: 12vw;
+    font-size: 1.3rem;
+    background-color: white;
+    color: black;
+    border-radius: 2vw;
+    font-weight: 530;
+}
+
+.shopping-category-men-category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7.5vh;
+    width: 10vw;
+    font-size: 1.3rem;
+    background-color: white;
+    color: black;
+    border-radius: 2vw;
+    font-weight: 530;
+}
+
+.scroll-animation {
+    padding: 2vw;
+    padding-left: 4vw;
+    display: flex;
+    gap: 11vw;
+    margin-top: 2vw;
+}
+
+.trending-links {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1vw;
+}
+
+[alt="circle-photo"] {
+    height: 12vh;
+    width: 6vw;
+    border-radius: 50%;
+}
+
+.gift-heading {
+    font-size: 3.5rem;
+    font-weight: 550;
+}
+
+.shopping-gift-content {
+    padding: 2vw;
+    padding-left: 3vw;
+    margin-top: 8vw;
+}
+
+.dift-text {
+    font-size: 2rem;
+    font-weight: 510;
+    width: 60vw;
+}
+
+.new-arrivals {
+    padding-left: 5vw;
+    padding-top: 5vw;
+}
+
+.new-arrival-heading {
+    font-size: 3.5rem;
+    font-weight: 540;
+}
+
+.new-arrival-img1 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3IIk8ItqiX2NwARNOx8F51/8105b726342fbebae26ba1c104051a4c/4821f93f84b47dea5a72259f3432e4b427279af5.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+
+.new-arrival-img2 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/5vabmaW7hzsYAx0uIrgaDx/31d39a6a57424019074e31be7c69a349/ac5bbde5f08578e16ff4727b4d3ff4a7662d237e.jpg?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+
+.new-arrival-img3 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/4cjpGQqGROz1aLILZWBIOG/8ab5ff7b4e4022026a94c72cc2c94f91/c535abb21da30b613540fda5a35c2ee5069aeebf.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+
+.new-arrival-img4 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3fRNj0dwMJsMupDiBnD6Xe/3079596e4f6cd05c92a1a9247ef892b7/62944fb1dadf8fe0f1d26f4983c9828d5ba9fc73.jpg?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+
+.new-arrival-img-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.new-arrival-img1-row1 {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.new-arrival-img1-row2 {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.new-arrival-img1-row3 {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.new-arrival-img1-row4 {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.new-arrival-img-row {
+    display: flex;
+    gap: 4vw;
+}
+
+.shop-her-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 5vw;
+}
+
+.shop-for {
+    height: 8vh;
+    width: 10vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    font-weight: 540;
+    margin-top: 4vw;
+}
+
+.running-gift {
+    padding: 2vw;
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 5vw;
+}
+
+.running-gift-heading {
+    font-size: 3rem;
+    font-weight: 550;
+}
+
+.running-gift-text-content {
+    font-size: 2rem;
+    font-weight: 520;
+}
+
+.shop-for-row {
+    display: flex;
+    gap: 2vw;
+}
+
+.shop-for- {
+    height: 8vh;
+    width: 10vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    font-weight: 540;
+    margin-top: 2vw;
+}
+
+.backimg-running1 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/1UapAseznA1iSLS1ZvdcnY/206b83ada0664ada96e08ad763a21720/fw25-holiday-pr-head_to_toe_still-look_1-02.jpg?w=960&h=1440&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    width: 30vw;
+    display: flex;
+    /* flex-direction:column; */
+}
+
+.backimg-running2 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/6JJGXpJ6boeufqdzjF9gtz/ce4b4e6e7b440344ca9b5d465ac4160a/fw25-holiday-mix-product_still-11.jpg?w=960&h=1440&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    width: 30vw;
+    display: flex;
+}
+.backimg-running3 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/5dW0j6Tpj0dkh0G5szYIIs/06c1fe9bdc50bf99203ed97b0a55955a/fw25-holiday-mix-product_still-12.jpg?w=960&h=1440&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    width: 30vw;
+    display: flex;
+}
+.backimg-running4 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3tM46j0LMaHOy5CNMqXBAR/060bb1d8f2b4904eed6ee4ec0d29c655/fw25-holiday-pad-head_to_toe_still-look_2-02.jpg?w=960&h=1440&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    width: 30vw;
+    display: flex;
+}
+.backimg-running5 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3IDIEM3yflYBrfd38qWzot/d69cd9073a12fd6989f4e30dba271661/fw25-holiday-mix-product_still-08.jpg?w=960&h=1440&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    width: 30vw;
+    display: flex;
+}
+.backimg-running6 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3rk2zSqRmZEsECEYqpjrzD/1c6273a7c735b7a84455ebc07dee8682/fw25-holiday-mix-product_still-05.jpg?w=960&h=1440&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    width: 30vw;
+    display: flex;
+}
+
+.running-products {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.see-products {
+    height: 8vh;
+    width: 10vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    font-weight: 540;
+    /* margin-top: 2vw; */
+    display: flex;
+    align-self: flex-end;
+    margin: 2vw;
+}
+
+.running-img1 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/6dlRl0rkJDrC5DJiRz5rKD/3b0fb3dce41783ab309cb2bd23ac7d83/89069af2854bccc9e5989e3edd178dc8964316a0.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img2 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/53xxkH0XIXYyiGeTRE7GwE/17fa0464fe7afcad95dfde5af6bff157/7d5f127c40498a0c2e991c4fd928e7062a18cc65.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img4 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/6eC2hU2F2Qm6uGTMw0bMKW/6fbd4293d0f64544ed4e821eea05a623/467f3d2197d19a5ed824ce997fa25c4d97bf0551.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img3 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3IIk8ItqiX2NwARNOx8F51/8105b726342fbebae26ba1c104051a4c/4821f93f84b47dea5a72259f3432e4b427279af5.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img5 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/6aWV5IZgnoylphxY6EG1TU/d05934bd1e36cf27fb1f3616144d41dd/4b0ee4e481728cd4a490629580d7535a957a3841.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img6 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3fRNj0dwMJsMupDiBnD6Xe/3079596e4f6cd05c92a1a9247ef892b7/62944fb1dadf8fe0f1d26f4983c9828d5ba9fc73.jpg?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img7 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/3IXCzgsTy5HB8n3ijTb1vI/f1adfcd1164a3e20bbc28b397d009f07/9fc9fdf41ae2bfd68788cebc2a8185edc88a2cb7.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img8 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/4gUHq1GVxZ7Lc8aPhzPd1r/4379852edff68ca38df364eb24617fbb/ney4crga9jkpaktbmzp2.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img9 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/4GCC0V4e1plhDFYN8oNuCt/3f31af80114a7ca906a4373248712471/8a7cab6c8d17a7ba49d8e9955fe1403ce7e337dc.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img10 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/6cRPlZZcUcMqtiU39toIkA/4a766c9db5c82502948ddcb2c5dd90d1/f5ee0364a31a1e1895f654e06fddd6b3e668e4b9.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img11 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/4ROEdGjV13OQ8plO0kt9Tr/df7874036ae35b793ac75c37ede7c2c8/24bfbd4eb7d23ba66a26da9c2eae7e4ec1c9886f.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+.running-img12 {
+    background-image: url(https://images.ctfassets.net/hnk2vsx53n6l/YiDE7JOktrOt7jr9ppfZS/dc8f08c9515fa3e5cc90b987ab69c1b4/8c72edcdaa48c12cf299416202c307aecd29c061.png?w=808&h=808&fm=avif&f=center&fit=fill&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 20vw;
+    /* border: 2px solid; */
+}
+
+.footer {
+  padding: 60px 10%;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.newsletter h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  max-width: 450px;
+  margin-bottom: 20px;
+}
+
+.newsletter input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  border: none;
+  background: #f4f4f4;
+  font-size: 1rem;
+  outline: none;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  margin-bottom: 10px;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.policies a {
+  text-decoration: none;
+  color: #000;
+  transition: opacity 0.3s;
+}
+
+.policies a:hover {
+  opacity: 0.6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+  font-size: 1.2rem;
+}
+
+.social-icons a {
+  color: #000;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

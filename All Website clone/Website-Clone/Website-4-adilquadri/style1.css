@@ -1,0 +1,925 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* height: 2000vh; */
+}
+
+.Extradiscount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(178, 140, 66);
+    height: 5vh;
+    color: white;
+}
+
+[alt="ADlogo"] {
+    height: 1.8vw;
+}
+
+.navbar {
+    display: flex;
+    padding: 1vw;
+    padding-top: 1.5vw;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.navlinksrow1 {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 2vw;
+}
+
+.navlinksrow2 {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 2vw;
+}
+
+.navlinksrow3 {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 2vw;
+}
+
+[href="navlinks"] {
+    color: rgb(83, 33, 33);
+    text-decoration: none;
+}
+
+[href="navlinks"]:hover {
+    text-decoration: underline;
+}
+
+.search-profile-cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+[alt="Searchicon"] {
+    height: 3vh;
+}
+
+.centerlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-content {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/why-trust-us-bg.png?v=1734606229);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(44, 9, 6);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    width: 100%;
+    font-size: 2.2rem;
+    align-items: center;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+[alt="filter-icon"] {
+    height: 4vh;
+}
+
+[alt="sort-icon"] {
+    margin-top: .2vw;
+    height: 5.5vh;
+}
+
+[alt="down-arrow"] {
+    margin-top: .2vw;
+    height: 2.5vh;
+}
+
+.filter {
+    height: 6vh;
+    width: 10vw;
+    background-color: white;
+    border-radius: .3vw;
+    color: black;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    box-sizing: border-box;
+}
+
+.head-content-child {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    box-sizing: border-box;
+}
+
+.sort-by {
+    height: 6vh;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 1rem;
+    color: black;
+    border-radius: .3vw;
+    gap: .6vw;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2vw;
+}
+
+.container-row1 {
+    display: flex;
+    gap: 2vw;
+}
+
+.container-row2 {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.container-row3 {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.container-row4 {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.container-row5 {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.container-row6 {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.container-row7 {
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.trending-perfume {
+    height: 75vh;
+    width: 25vw;
+    margin-top: 2vw;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+}
+
+.discountedprice {
+    font-size: 1.2rem;
+}
+
+.discount {
+    background-color: #379867;
+    height: 1.5vw;
+    width: 4vw;
+    font-size: .7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .3vw;
+    color: white;
+}
+
+.color-star {
+    color: goldenrod;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: .5vw; */
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #929292;
+    background-color: #ececec;
+    height: 4vh;
+    width: 7vw;
+    gap: .2vw;
+    border-radius: .3vw;
+    font-size: .8rem;
+}
+
+.centercontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-on-emi {
+    border: .1vw solid rgb(0, 0, 0);
+    padding: .2vw;
+    border-radius: .3vw;
+    font-size: .5vw;
+}
+
+.or-option {
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+}
+
+.trending-content {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    /* padding: .5vw; */
+}
+
+.trending-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 26vh;
+    padding: 1vw;
+}
+
+:root {
+    --gradient-button-background: linear-gradient(45deg, rgba(166, 109, 48, 1), rgba(255, 229, 142, 1) 50%, rgba(224, 176, 87, 1) 100%);
+}
+
+.Add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5vw;
+    height: 5.5vh;
+    width: 100%;
+    background: var(--gradient-button-background);
+}
+
+[alt="Add-to-cart"] {
+    height: 5vh;
+}
+
+[alt="advertisment"] {
+    height: 50vh;
+    margin-top: 2vw;
+    border-radius: 1vw;
+}
+
+.trending1 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/hero-img.jpg?v=1760790030&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.trending1:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/50-perfume-discovery-set-10x5ml-long-lasting-parfum-pocket-original-imahegw4zfxyrmea.jpg?v=1760790030&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending2 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Trio_20ml.5.jpg?v=1727102757&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.trending2:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Trio_20ml.10.jpg?v=1727102757&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending3 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2024-10-13_at_5.30.16_PM.jpg?v=1728821723&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.trending3:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2024-10-13_at_5.37.08_PM_1.jpg?v=1728821765&width=1200);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending4 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-29at00.30.48.jpg?v=1753781903&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.trending4:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/The_Story_20ml.1_f25c06bd-7b45-48a7-a7f8-7fc46d5b3b10.jpg?v=1753781903&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending5 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-28at23.57.00.jpg?v=1753782117&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending6 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-28at23.56.58_1.jpg?v=1753781874&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.trending6:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/shanaya20.jpg?v=1753781874&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending7 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-09-07at11.18.34AM.jpg?v=1757224175&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.trending7:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Lazina_20ml_edp_9_combo_28118726-0037-40f8-84d9-a658cee24318.jpg?v=1760704806&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+
+.trending8 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-08_at_19.45.20_94abd81b.jpg?v=1759933190&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending9 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/B_0f6f829e-ff66-438d-8e11-9a617beebdc2.jpg?v=1744208351&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending9:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/A_d2822cb0-450b-4a29-b008-c5d43132b6d3.jpg?v=1744208351&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending10 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-08_at_19.45.23_6d6e7473.jpg?v=1760079689&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending11 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-08_at_19.45.20_2a74008a.jpg?v=1759933094&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending12 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/AiBottle50mledpcomboTheStoryWhiteOudh.jpg?v=1751119913&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending13 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/A_94eb0cfd-6965-4bb1-959d-b97489ca1d5a.jpg?v=1744640156&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending13:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/A_d2822cb0-450b-4a29-b008-c5d43132b6d3.jpg?v=1744208351&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending14 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-15_at_16.19.56_efa1f126.jpg?v=1760631344&width=1600);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending14:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/2-1.jpg?v=1760631344&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending15 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-15at11.34.51.jpg?v=1752576909&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending16 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-10-10at15.47.28_2.jpg?v=1760167911&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending17 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-08_at_19.45.21_267ad067.jpg?v=1759990831&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending17:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/1_caf32d67-ce85-40e4-8503-cd42ee25b695.jpg?v=1759990831&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending18 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-28at23.56.58_8c77c09e-bce9-431e-8a76-7afd0e769df5.jpg?v=1761636057&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending19 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/B_729d7432-88d2-4b41-901c-5332599a88aa.jpg?v=1744640231&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending19:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/A_a21bb013-8933-4576-add0-dc1c1019b3aa.jpg?v=1744640231&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending20 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Triopackcombo2.jpg?v=1729493748&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending20:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Triopackcombo1.jpg?v=1729493748&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending21 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-10-10at15.47.28.jpg?v=1760167885&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending22 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-08_at_19.45.22_0e8259ca.jpg?v=1759933700&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending22:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/ShanayaOudh50mlnew.jpg?v=1759933700&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending23 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-10-10at15.47.28_1.jpg?v=1760167898&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending24 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Raazi---Aboland2copy.jpg?v=1755239320&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending24:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-10at3.50.16PM_1.jpg?v=1755239320&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending25 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Jaami---Aboland2copy.jpg?v=1755237702&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending25:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-10at3.50.14PM.jpg?v=1755237702&width=700);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+.trending26 {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/WhatsAppImage2025-07-28at23.56.59.jpg?v=1753781831&width=1000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.trending26:hover {
+    background-image: url(https://www.adilqadri.com/cdn/shop/files/Shanaya_Gold_20ml.1_09763dd9-5648-429c-ba36-1c9daaa83a46.jpg?v=1753781831&width=500);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+
+.trending-perfume24 {
+    height: 75vh;
+    width: 22.5vw;
+    margin-top: 2vw;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.trending-perfume25 {
+    height: 75vh;
+    width: 22vw;
+    margin-top: 2vw;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.footer {
+    height: 100vh;
+    background-color: rgb(67, 17, 11);
+    padding-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-top: 5vw;
+}
+
+.footer-row1 {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+
+}
+
+[alt="footer-logo"] {
+    height: 4vh;
+}
+
+.phone {
+    height: 5vh;
+}
+
+[alt="phone-img"] {
+    height: 5vh;
+}
+
+[alt="email-icon"] {
+    height: 3vh;
+}
+
+.footer-img {
+    display: flex;
+    gap: 1vw;
+}
+
+[alt="footer-img"] {
+    height: 3vh;
+}
+
+.footer-back {
+    background-color: rgb(255, 255, 255);
+    height: 6vh;
+    width: 3vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.footer-row1-col1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.footer-row1-col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.footer-row1-col3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.footer-row1-col4 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.footer-row1-col2-row1 {
+    display: flex;
+    flex-direction: column;
+    gap: .8vw;
+}
+
+.footer-row1-col2-row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.footer-bigline-center {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vw;
+    align-items: center;
+    gap: 1.5vw;
+    /* justify-content: center; */
+}
+
+.footer-big-line {
+    height: .1vh;
+    width: 90%;
+    background-color: white;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 55vw;
+    color: white;
+}
+
+.footer-text-width {
+    width: 25vw;
+    font-size: .9em;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.email {
+    width: 100%;
+    border: .2vw solid white;
+    height: 5vh;
+    border-radius: 1vw;
+}
+
+.phone-no {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761020177/qoqqmruiobmzsqvzt8fp.jpg);
+    background-size: 100vw 70vh;
+    background-repeat: no-repeat;
+}
+
+[alt="logo"] {
+    height: 10vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orangebck {
+    height: 7vh;
+    width: 10vw;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 20vw;
+}
+
+.navbar2 {
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+
+.whitefont {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.orangebck:hover {
+    background-color: black;
+}
+
+.whitebigfont {
+    color: white;
+    font-size: 3rem;
+    margin-top: 3vw;
+    margin-left: 10vw;
+}
+
+.content1 {
+    display: flex;
+    margin-top: 65vh;
+    gap: 15vw;
+}
+
+[alt="abc"] {
+    height: 75vh;
+    width: 50vw;
+}
+
+.text {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+[href="123"] {
+    color: orange;
+}
+
+.seprationline {
+    height: .2vh;
+    width: 95vw;
+    margin-top: 5vw;
+    color: black;
+    background-color: black;
+    opacity: .5;
+}
+
+.img1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content2 {
+    display: flex;
+    margin-top: 5vw;
+    gap: 15vw;
+}
+
+.developer {
+    opacity: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+}
+
+[alt="a2c"] {
+    height: 5vh;
+}
+
+[alt="loc"] {
+    height: 25vh;
+    width: 20vw;
+}
+
+[alt="endlogo"] {
+    height: 15vh;
+}
+
+.loc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.endrow1 {
+    display: flex;
+    gap: 5vw;
+    margin-left: 10vw;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.endlongline {
+    height: .3vh;
+    width: 90vw;
+    background-color: black;
+    opacity: .4;
+    margin-top: 10vh;
+}
+
+.fatlongline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.endnav1 {
+    display: flex;
+    gap: 2vw;
+}
+
+.endnav2 {
+    display: flex;
+    gap: 2vw;
+}
+
+.navandother {
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+}
+
+.footer{
+    margin-top: 10vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
