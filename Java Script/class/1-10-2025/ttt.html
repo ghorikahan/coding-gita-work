@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 5px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            font-size: 2rem;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="turn"></h2>
+    <div class="board">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        let player = true;
+
+        const winner = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ];
+
+        function checkWinner() {
+            for (let row of winner) {
+                const [a, b, c] = row;
+                if (boxes[a].innerHTML &&
+                    boxes[a].innerHTML === boxes[b].innerHTML &&
+                    boxes[a].innerHTML === boxes[c].innerHTML) {
+                    alert("Winner is " + boxes[a].innerHTML);
+                    boxes.forEach(box => box.disabled = true);
+                }
+            }
+        }
+
+        boxes.forEach((box) => {
+            box.addEventListener("click", () => {
+                if (player) {
+                    box.innerHTML = "O";
+                } else {
+                    box.innerHTML = "X";
+                }
+                player = !player;
+                box.disabled = true;
+                checkWinner();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="para">this is task - 01</p>
+    <button type="button" class="Startbtn">Start</button>
+    <button type="button" class="Endbtn">End</button>
+    <script>
+        var startBtn = document.querySelector(".Startbtn");
+        var endBtn = document.querySelector(".Endbtn");
+        var para = document.querySelector(".para");
+
+        function randomClr() {
+            var green = Math.floor((Math.random() * 255));
+            var red = Math.floor((Math.random() * 255));
+            var blue = Math.floor((Math.random() * 255));
+
+            // var color = `rgb(${red},${green},${blue})`;
+
+            return `rgb(${red},${green},${blue})`;
+        }
+
+        startBtn.addEventListener("click", () => {
+            para.style.color = randomClr();
+            id = setInterval(() => {
+                var green = Math.floor((Math.random() * 256));
+                var red = Math.floor((Math.random() * 256));
+                var blue = Math.floor((Math.random() * 256));
+
+                para.style.color = `rgb(${red}, ${green}, ${blue})`;
+            }, 1000)
+        })
+
+        endBtn.addEventListener("click",()=>{
+            clearInterval(id);
+            para.style.color = "black";
+            para.textContent += "user had enterd the end button"
+        })
+    </script>
+</body>
+
+</html>

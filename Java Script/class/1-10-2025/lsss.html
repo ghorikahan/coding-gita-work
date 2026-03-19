@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local & Session Storage Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    p {
+      margin-top: 20px;
+      font-weight: bold;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <h2>Local & Session Storage Demo</h2>
+
+  <button id="saveLocalBtn">Save to Local Storage</button>
+  <button id="retrieveLocalBtn">Retrieve from Local Storage</button>
+  <br>
+  <button id="saveSessionBtn">Save to Session Storage</button>
+  <button id="retrieveSessionBtn">Retrieve from Session Storage</button>
+
+  <p id="output">Result will appear here...</p>
+
+  <script>
+    // Accessing Elements
+    const saveLocalButton = document.getElementById("saveLocalBtn");
+    const retrieveLocalButton = document.getElementById("retrieveLocalBtn");
+    const saveSessionButton = document.getElementById("saveSessionBtn");
+    const retrieveSessionButton = document.getElementById("retrieveSessionBtn");
+    const outputParagraph = document.getElementById("output");
+
+    // Save to Local Storage
+    saveLocalButton.addEventListener("click", function() {
+      localStorage.setItem("cityLocal", "Mumbai");
+      outputParagraph.textContent = "City saved to Local Storage: Mumbai";
+    });
+
+    // Retrieve from Local Storage
+    retrieveLocalButton.addEventListener("click", function() {
+      const savedCityLocal = localStorage.getItem("cityLocal");
+      if (savedCityLocal) {
+        outputParagraph.textContent = "City retrieved from Local Storage: " + savedCityLocal;
+      } else {
+        outputParagraph.textContent = "City not found in Local Storage.";
+      }
+    });
+
+    // Save to Session Storage
+    saveSessionButton.addEventListener("click", function() {
+      sessionStorage.setItem("citySession", "Delhi");
+      outputParagraph.textContent = "City saved to Session Storage: Delhi";
+    });
+
+    // Retrieve from Session Storage
+    retrieveSessionButton.addEventListener("click", function() {
+      const savedCitySession = sessionStorage.getItem("citySession");
+      if (savedCitySession) {
+        outputParagraph.textContent = "City retrieved from Session Storage: " + savedCitySession;
+      } else {
+        outputParagraph.textContent = "City not found in Session Storage.";
+      }
+    });
+  </script>
+</body>
+</html>

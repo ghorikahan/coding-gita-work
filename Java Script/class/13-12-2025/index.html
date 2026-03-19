@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="box">
+    <label for="box">click Me!</label>
+
+    <script>
+        var box = document.querySelector("#box");
+        // box.addEventListener("change", (event) => {
+        //     if (event.target.checked) {
+        //         console.log("element is clicked");
+        //         fetch("https://real-time-amazon-data.p.rapidapi.com/top-product-reviews?asin=B07ZPKN6YR&country=US&rapidapi-key=eefc5c4418msh8769a421639aecap10a43cjsnac22ae03d881")
+        //             .then((response) => response.json())
+        //             .then((data1) => {
+        //                 data1.data.reviews.forEach(element => {
+        //                     console.log(element.review_id);
+        //                     console.log(element.review_title);
+        //                     console.log(element.review_comment);
+        //                 });
+        //             })
+        //     }
+        // })
+
+        box.addEventListener("change", (event) => {
+            if (event.target.checked) {
+                fetch("https://real-time-amazon-data.p.rapidapi.com/top-product-reviews?asin=B07ZPKN6YR&country=US&rapidapi-key=eefc5c4418msh8769a421639aecap10a43cjsnac22ae03d881")
+                .then((response)=> response.json())
+                .then((data1)=>{
+                   console.log("it is working");
+                   if(data1.data.reviews[0].review_date.includes("october")){
+                    console.log(data1.data.reviews[0]);
+                   }
+                   else{
+                    console.log("code is not working")
+                   }
+                })
+            }
+        })
+
+    </script>
+</body>
+
+</html>

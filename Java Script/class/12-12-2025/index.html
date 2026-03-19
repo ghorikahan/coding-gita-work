@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" id="clk-btn">Click me!</button>
+    <script>
+        var btn = document.querySelector('#clk-btn');
+        function addCard(){
+
+        }
+        function loadData() {
+            fetch("https://facebook-scraper3.p.rapidapi.com/profile/photos?profile_id=100057864828042&rapidapi-key=eefc5c4418msh8769a421639aecap10a43cjsnac22ae03d881")
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+        btn.addEventListener("click",loadData);
+    </script>
+</body>
+
+</html>
