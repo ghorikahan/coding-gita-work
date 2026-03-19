@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            /* border: 2px solid red; */
+            width: 100%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            background-color: blueviolet;
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-around;
+            /* border: 2px solid black; */
+            width: 40%;
+        }
+
+        .menubar {
+            display: none;
+        }
+
+        .menubar .bar {
+            width: 40px;
+            height: 8px;
+            border-radius: 20px;
+            margin-bottom: 2px;
+            background-color: black;
+            display: block;
+        }
+
+        /* section-1 */
+        .section1 {
+            border: 2px solid red;
+            display: flex;
+            gap: 5px;
+        }
+
+        .div1 {
+            border: 2px solid green;
+            width: 50%;
+            height: 200px;
+        }
+
+        .div2 {
+            border: 2px solid blue;
+            width: 50%;
+            height: 200px;
+        }
+
+        /* footer */
+
+        .footer {
+            border: 2px solid black;
+            display: flex;
+            gap: 2px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px 0px;
+            background-color: red;
+        }
+
+        .f1 {
+            border: 2px solid red;
+            width: 25%;
+            height: 150px;
+        }
+
+        .f2 {
+            border: 2px solid blue;
+            width: 60%;
+            height: 150px;
+        }
+
+        .f3 {
+            border: 2px solid green;
+            width: 15%;
+            height: 150px;
+        }
+
+        /* grid css */
+
+        .container {
+            /* border: 2px solid red; */
+            display: grid;
+
+            /* grid-template-columns: 300px 45% 250px;
+    grid-template-rows: 200px 200px 200px; */
+
+
+            /* grid-template-columns: repeat(2, 150px) 1fr;  
+    grid-template-rows: 300px repeat(2, 200px); */
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 200px 200px 200px;
+            grid-auto-rows: 200px;
+            gap: 10px 8px;
+        }
+
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .box2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .box4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .box4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+
+        .box9 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+
+        /* gap : row column */
+
+        /* media queries */
+        @media screen and (min-width:481px) and (max-width:768px) {
+            .menubar {
+                display: block;
+            }
+
+
+            .link {
+                display: none;
+            }
+
+            .navbar:has(.menubar:hover) .link {
+                border: 2px solid red;
+                display: flex;
+                position: absolute;
+                top: 75px;
+                right: 15px;
+                flex-direction: column;
+                width: 15%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .section1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .div1 {
+                width: 100%;
+            }
+
+            .div2 {
+                width: 100%;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .f1 {
+                width: 100%;
+            }
+
+            .f2 {
+                width: 100%;
+            }
+
+            .f3 {
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            /* border: 2px solid red; */
+            width: 100%;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+            background-color: blueviolet;
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-around;
+            /* border: 2px solid black; */
+            width: 40%;
+        }
+
+        .menubar {
+            display: none;
+        }
+
+        .menubar .bar {
+            width: 40px;
+            height: 8px;
+            border-radius: 20px;
+            margin-bottom: 2px;
+            background-color: black;
+            display: block;
+        }
+
+        /* section-1 */
+        .section1 {
+            border: 2px solid red;
+            display: flex;
+            gap: 5px;
+        }
+
+        .div1 {
+            border: 2px solid green;
+            width: 50%;
+            height: 200px;
+        }
+
+        .div2 {
+            border: 2px solid blue;
+            width: 50%;
+            height: 200px;
+        }
+
+        /* footer */
+
+        .footer {
+            border: 2px solid black;
+            display: flex;
+            gap: 2px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 10px 0px;
+            background-color: red;
+        }
+
+        .f1 {
+            border: 2px solid red;
+            width: 25%;
+            height: 150px;
+        }
+
+        .f2 {
+            border: 2px solid blue;
+            width: 60%;
+            height: 150px;
+        }
+
+        .f3 {
+            border: 2px solid green;
+            width: 15%;
+            height: 150px;
+        }
+
+        /* grid css */
+
+        .container {
+            /* border: 2px solid red; */
+            display: grid;
+
+            /* grid-template-columns: 300px 45% 250px;
+    grid-template-rows: 200px 200px 200px; */
+
+
+            /* grid-template-columns: repeat(2, 150px) 1fr;  
+    grid-template-rows: 300px repeat(2, 200px); */
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 200px 200px 200px;
+            grid-auto-rows: 200px;
+            gap: 10px 8px;
+        }
+
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .box2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .box4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .box4 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+
+        .box9 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+
+        /* gap : row column */
+
+        /* media queries */
+        @media screen and (min-width:481px) and (max-width:768px) {
+            .menubar {
+                display: block;
+            }
+
+
+            .link {
+                display: none;
+            }
+
+            .navbar:has(.menubar:hover) .link {
+                border: 2px solid red;
+                display: flex;
+                position: absolute;
+                top: 75px;
+                right: 15px;
+                flex-direction: column;
+                width: 15%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .section1 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .div1 {
+                width: 100%;
+            }
+
+            .div2 {
+                width: 100%;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .f1 {
+                width: 100%;
+            }
+
+            .f2 {
+                width: 100%;
+            }
+
+            .f3 {
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width: 480px) {}
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <!-- <div class="navbar">
+        <div class="logo">
+            <p>MyLogo</p>
+        </div>
+        <div class="link">
+            <p>Home</p>
+            <p>Contact</p>
+            <p>About us</p>
+        </div>
+        <div class="menubar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div> -->
+
+    <!-- section1 -->
+    <!-- <div class="section1">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div> -->
+
+    <!-- footer -->
+    <!-- <div class="footer">
+        <div class="f1 fx">
+            <p>home</p>
+            <p>contact</p>
+            <p>About</p>
+        </div>
+        <div class="f2 fx">
+            <p>home</p>
+            <p>contact</p>
+            <p>About</p>
+        </div>
+        <div class="f3 fx">
+            <p>home</p>
+            <p>contact</p>
+            <p>About</p>
+        </div>
+
+    </div> -->
+
+    <!-- Grid Layout -->
+
+    <div class="container">
+        <p class="box1">box1</p>
+        <p class="box2">box2</p>
+        <p class="box3">box3</p>
+        <p class="box4">box4</p>
+        <p class="box5">box5</p>
+        <p class="box6">box6</p>
+        <p class="box7">box7</p>
+        <p class="box8">box8</p>
+        <p class="box9">box9</p>
+    </div>
+
+    <!-- <script src="style.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            height: 13vh;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 2vw;
+            font-weight: 560;
+            font-size: 1.5rem;
+            box-sizing: border-box;
+        }
+
+        .nav-bar-links {
+            display: flex;
+            gap: 1vw;
+        }
+
+        .ham-burger {
+            display: none;
+        }
+
+        @media (max-width:580px) {
+            .nav-bar-links {
+                display: none;
+            }
+
+            .ham-burger {
+                height: 5vh;
+                display: flex;
+                flex-direction: column;
+                gap: 1vw;
+            }
+
+            .ham-line {
+                height: 1vh;
+                width: 4vw;
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div>Logesh</div>
+            <div class="nav-bar-links">
+                <a>Home</a>
+                <a>Services</a>
+                <a>Contact Us</a>
+            </div>
+            <div class="ham-burger">
+                <div class="ham-line"></div>
+                <div class="ham-line"></div>
+                <div class="ham-line"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
