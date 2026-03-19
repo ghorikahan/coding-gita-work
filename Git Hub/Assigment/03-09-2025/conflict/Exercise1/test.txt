@@ -1,0 +1,6 @@
+# My Project
+This is a test file.
+It contains some content.
+
+This line was added on main branch
+This line was added on feature branch
