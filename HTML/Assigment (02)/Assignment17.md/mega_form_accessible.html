@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CodingGita University - Admission + Internet Survey Form</h1>
+
+    <p>Please fill out this application form completely.
+        Your admission will be considered along with the
+        internet usage survey for research purposes.
+    </p>
+
+    <form action="">
+        <fieldset><legend>Personal information:</legend>
+            <label for="fnm">Full Name:</label>
+            <input type="text" id="fnm">
+            <br>
+            <br>
+            <label for="fnm">Father's Name:</label>
+            <input type="text" id="fnm">
+            <br>
+            <br>
+            <label for="fnm">Mother's Name:</label>
+            <input type="text" id="fnm">
+            <br>
+            <br>
+            <label for="eml"> E-mail: </label>
+            <input type="email" id="eml">
+            <br>
+            <br>
+            <label for="num">Phone:</label>
+            <input type="number" id="num" min="10">
+            <br>
+            <br>
+            <label for="dt"> Date:</label>
+            <input type="date" id="dt">
+            <br>
+            <br>
+
+            <label for="">Gender:</label>
+            <input type="radio" id="ml" name="gender">
+            <label for="ml">Male</label>
+
+            <input type="radio" id="fl" name="gender">
+            <label for="fl">Female</label>
+
+            <input type="radio" id="ot" name="gender">
+            <label for="ot">Other</label>
+
+            <br>
+            <br>
+            <label for="">Nationality:</label>
+            <select name="" id="">
+
+                <option value="">India</option>
+                <option value="">NRI</option>
+                <option value="">Other</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="upp">Upload photo:</label>
+            <input type="file" id="upp" accept=".jpg,.png">
+        </fieldset>
+
+
+        <fieldset> <legend>Academic</legend>
+
+            <label for="drpd">Highest Qualification:</label>
+            <input type="text" id="drpd">
+            <br>
+            <br>
+
+            <label for="strm">Stream:</label>
+            <input type="text" id="strm">
+            <br>
+            <br>
+            <label for="drpd">Percentage/CGPA:</label>
+            <input type="number" min="0" max="10" id="drpd">
+            <br>
+            <br>
+            <!-- <label for="drpd">Years of passing :</label>
+    <input type="" id="drpd"> -->
+
+            <label for="">subjects studied :</label>
+
+            <input type="checkbox" id="phy">
+            <label for="phy">physics</label>
+
+            <input type="checkbox" id="mth">
+            <label for="mth">Math</label>
+
+            <input type="checkbox" id="cs">
+            <label for="cs">CS</label>
+
+            <input type="checkbox" id="eng">
+            <label for="eng">English </label>
+
+            <br>
+            <br>
+            <label for="cer">Upload Certificate:</label>
+            <input type="file" id="cer">
+            <br>
+            <br>
+            <label for="">preferred Course</label>
+
+
+            <select name="" id="">
+                <option value="">MERN</option>
+                <option value="">DSA</option>
+                <option value="">AI/ML</option>
+                <option value="">WEB Dev</option>
+                <option value="">Clod</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="">Admission Category:</label>
+
+
+            <input type="radio" id="gnr" name="cast">
+            <label for="gnr">General</label>
+
+            <input type="radio" id="sc" name="cast">
+            <label for="sc">SC</label>
+
+            <input type="radio" id="st" name="cast">
+            <label for="st">ST</label>
+
+            <input type="radio" id="OBC" name="cast">
+            <label for="OBC">OBC</label>
+            <input type="radio" id="EWS" name="cast">
+            <label for="EWS">EWS</label>
+
+        </fieldset>
+
+        <fieldset> <legend>Internet Usage & Skills </legend>
+
+            <label for="">Internet Access:</label>
+
+            <input type="radio" id="ys">
+            <label for="ys">Yes</label>
+
+            <input type="radio" id="ys">
+            <label for="ys">no</label>
+            <br>
+            <br>
+
+            <label for=""> Devices Used:</label>
+
+            <input type="checkbox" id="lpt">
+            <label for="lpt">Laptop</label>
+
+            <input type="checkbox" id="mbl">
+            <label for="mbl">Mobile</label>
+
+            <input type="checkbox" id="tab">
+            <label for="tab">Tablet</label>
+
+            <input type="checkbox" id="Det">
+            <label for="Det">Desktop </label>
+            <br>
+            <br>
+            <label for=""> Average Usage:</label>
+
+            <select name="" id="">
+                <option value="">&lt;1 hour</option>
+                <option value="">1-3hours</option>
+                <option value="">3-6hours</option>
+                <option value="">6+hours</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="pst">Preferred Study time:</label>
+            <input type="time" id="pst">
+            <br>
+            <br>
+            <label for="wdu">Weekly Data Usage:</label>
+            <input type="range" min="0" max="100" id="wdu" value="number" oninput="output.value=this.value">
+
+            <output name="output"> 50</output>
+            <br>
+            <br>
+            <label for="">Favorite Social Platform </label>
+
+            <input type="text" name="" id="" list="fsp">
+
+            <datalist id="fsp">
+                <option value="youtube">youtube</option>
+                <option value="instagram">instagram</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Discord">Discord</option>
+                <option value="GitHub">GitHub</option>
+                <option value="Twitter">Twitter</option>
+
+            </datalist>
+            <br>
+            <br>
+
+            <label for="">Skills:</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">CSS</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">Node.js</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">React</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">Mongo.DB</label>
+
+            <input type="checkbox" id="html">
+            <label for="html">Git</label>
+
+            <br>
+            <br>
+
+            <label for="fle"> Upload Speed Test Screenshot:</label>
+            <input type="file" id="fle">
+
+            <label for="clr"> Favorite color:</label>
+            <input type="color" id="clr">
+
+            <label for="">How much satisfied are you?</label>
+
+            <br>
+            <br>
+            <label for="">Internet satisfaction:</label>
+            <input type="range" min="0" max="10" id="rng" value="number" oninput="output.value=this.value">
+
+            <output name="output"> 5</output>
+
+        </fieldset>
+
+        <fieldset><legend>Declaration</legend>
+
+            <label for=""> Why Join Coding gita? </label>
+            <br>
+            <textarea name="" id="50" cols="30" rows="10"></textarea>
+            <br><br>
+            <label for=""> How has internet helped your education? </label>
+            <br>
+            <textarea name="" id="50" cols="30" rows="10"></textarea>
+            <br>
+            <br>
+
+            <label for="">Recommand Coding gita?</label>
+            <input type="radio" id="ys">
+            <label for="ys">Yes</label>
+
+            <input type="radio" id="no">
+            <label for="no">no</label>
+
+            <br>
+<br>
+            <input type="checkbox">
+            <label for="">I hereby declare all information is true.</label>
+<br>
+<br>
+
+            <label for="">Upload Signature</label>
+            <input type="file">
+<br>
+<br>
+
+<label for="">Date of submission </label>
+<input type="date">
+
+<br>
+<br>
+
+<input type="submit">
+
+<input type="reset">
+ 
+</fieldset>
+
+    </form>
+
+</body>
+
+
+</html>

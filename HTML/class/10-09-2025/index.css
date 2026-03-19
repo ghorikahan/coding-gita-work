@@ -1,0 +1,19 @@
+p {
+    color: blue;
+    background-color: black;
+}
+
+.para {
+
+    color: aliceblue;
+    background-color: aqua;
+
+ }
+
+#id {
+    border: 3px solid black;
+ }
+
+#class {
+    border: 3px solid rgb(13, 0, 255);
+ }
