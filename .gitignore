@@ -1,0 +1,9 @@
+node_modules/
+**/node_modules/
+dist/
+build/
+.next/
+.env
+.DS_Store
+GSAP/vid-01/
+*.log
