@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.maincontent{
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+[alt="img"]{
+  height: 20vh;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  height: 35vh;
+  width: 13vw;
+  border-radius: 2vw;
+  border:2px solid grey;
+  margin-top: 2vw;
+}

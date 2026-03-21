@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Example</title>
+</head>
+<body>
+
+    <h2>Save Messages in Storage</h2>
+
+    <input type="text" id="messageInput" placeholder="Enter your message">
+    <button id="saveLocal">Save in localStorage</button>
+    <button id="saveSession">Save in sessionStorage</button>
+
+    <h3>Local Storage Messages:</h3>
+    <ul id="localMessages"></ul>
+
+    <h3>Session Storage Messages:</h3>
+    <ul id="sessionMessages"></ul>
+
+    <script>
+        const input = document.getElementById("messageInput");
+        const saveLocalBtn = document.getElementById("saveLocal");
+        const saveSessionBtn = document.getElementById("saveSession");
+
+        const localList = document.getElementById("localMessages");
+        const sessionList = document.getElementById("sessionMessages");
+
+        
+        function displayMessages(storage, listElement) {
+            listElement.innerHTML = "";
+            for (let i = 0; i < storage.length; i++) {
+                const key = storage.key(i);
+                const value = storage.getItem(key);
+                const li = document.createElement("li");
+                li.textContent = value;
+                listElement.appendChild(li);
+            }
+        }
+
+        
+        saveLocalBtn.addEventListener("click", function() {
+            const msg = input.value.trim();
+            if (msg !== "") {
+                const key = "local_" + new Date().getTime(); 
+                localStorage.setItem(key, msg);
+                displayMessages(localStorage, localList);
+                input.value = "";
+            }
+        });
+
+        
+        saveSessionBtn.addEventListener("click", function() {
+            const msg = input.value.trim();
+            if (msg !== "") {
+                const key = "session_" + new Date().getTime(); 
+                sessionStorage.setItem(key, msg);
+                displayMessages(sessionStorage, sessionList);
+                input.value = "";
+            }
+        });
+
+        
+        window.onload = function() {
+            displayMessages(localStorage, localList);
+            displayMessages(sessionStorage, sessionList);
+        };
+    </script>
+
+</body>
+</html>

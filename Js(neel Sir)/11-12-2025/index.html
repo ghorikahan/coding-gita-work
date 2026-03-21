@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function a1() {
+            let n1 = 10;
+            console.log(n1);
+            function a2() {
+                let n2 = 20;
+                console.log(n2);
+                function a3() {
+                    let n3 = 30;
+                    console.log(n3);
+                    function a4() {
+                        let a4 = 40;
+                        console.log(a4);
+                        console.log(n3);
+                        console.log(n2);
+                        console.log(n1);
+                    }
+                    a4();
+                }
+                a3();
+            }
+            a2();
+        }
+        a1();
+
+        class car {
+            constructor(company, make, engine) {
+                this.company = company;
+                this.make = make;
+                this.engine = engine;
+            }
+        }
+
+        var obj1 = new car("tata", 2024, 1500);
+        console.log(obj1);
+
+    </script>
+</body>
+
+</html>

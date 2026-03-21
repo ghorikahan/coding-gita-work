@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Todo List Styles */
+.todo-section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 25px;
+}
+
+.todo-section .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-stats {
+    background: var(--light);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.task-input input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.task-input button {
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.task-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-btn {
+    padding: 8px 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    background: white;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.category-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.category-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.category-btn[data-category="urgent"] {
+    color: var(--danger);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.category-btn[data-category="urgent"].active {
+    background: var(--danger);
+    color: white;
+}
+
+.task-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    color: var(--gray);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.filter-btn.active {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sm {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+}
+
+.task-list {
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: var(--dark);
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--light);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.task-checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--gray);
+    border-radius: 6px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.task-checkbox.checked {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.task-checkbox.checked::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.task-content {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.task-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: var(--gray);
+}
+
+.task-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.task-category {
+    padding: 3px 8px;
+    background: rgba(67, 97, 238, 0.1);
+    border-radius: 4px;
+    color: var(--primary);
+}
+
+.task-due {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.task-due.urgent {
+    color: var(--danger);
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.task-btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-edit {
+    color: var(--primary);
+}
+
+.btn-edit:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.btn-delete {
+    color: var(--danger);
+}
+
+.btn-delete:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.btn-priority {
+    color: var(--warning);
+}
+
+.btn-priority:hover {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.task-item.priority {
+    border-left: 4px solid var(--warning);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--light-gray);
+}
+
+.empty-state h4 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.ai-suggestions {
+    background: rgba(76, 201, 240, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid var(--accent);
+}
+
+.ai-suggestions h4 {
+    margin-bottom: 15px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.suggestion:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.btn-add-suggestion {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid var(--accent);
+    background: white;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-add-suggestion:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Task counter animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.task-stats.updated {
+    animation: bounce 0.3s ease;
+}
+
+/* Edit task modal */
+.task-edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.task-edit-modal.active {
+    display: flex;
+}
+
+.task-edit-content {
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+}
+
+.task-edit-content h3 {
+    margin-bottom: 20px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-form-group {
+    margin-bottom: 20px;
+}
+
+.edit-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.edit-form-group input,
+.edit-form-group select,
+.edit-form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.edit-form-group input:focus,
+.edit-form-group select:focus,
+.edit-form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.edit-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-filters {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .task-actions {
+        justify-content: center;
+    }
+    
+    .task-input {
+        flex-direction: column;
+    }
+    
+    .task-input button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-section {
+        padding: 15px;
+    }
+    
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .category-btn {
+        flex: 1;
+        justify-content: center;
+        min-width: calc(50% - 4px);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Add this right before the closing </main> tag in the main content -->
+<div class="todo-section">
+    <div class="section-header">
+        <h3><i class="fas fa-tasks"></i> Today's Tasks</h3>
+        <div class="task-stats">
+            <span id="tasksCompleted">0</span> / <span id="totalTasks">0</span> completed
+        </div>
+    </div>
+
+    <div class="todo-container">
+        <!-- Task Input -->
+        <div class="task-input-container">
+            <div class="task-input">
+                <input type="text" id="newTaskInput" placeholder="What needs to be done?">
+                <button id="addTaskBtn" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+            </div>
+            <div class="task-categories">
+                <button class="category-btn active" data-category="all">All Tasks</button>
+                <button class="category-btn" data-category="study">Study</button>
+                <button class="category-btn" data-category="work">Work</button>
+                <button class="category-btn" data-category="personal">Personal</button>
+                <button class="category-btn" data-category="urgent">
+                    <i class="fas fa-exclamation-circle"></i> Urgent
+                </button>
+            </div>
+        </div>
+
+        <!-- Task Filters -->
+        <div class="task-filters">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="priority">
+                    <i class="fas fa-flag"></i> Priority
+                </button>
+            </div>
+            <div class="task-actions">
+                <button id="clearCompletedBtn" class="btn btn-outline btn-sm">
+                    <i class="fas fa-trash"></i> Clear Completed
+                </button>
+                <button id="sortTasksBtn" class="btn btn-outline btn-sm">
+                    <i class="fas fa-sort-amount-down"></i> Sort
+                </button>
+            </div>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list" id="taskList">
+            <!-- Tasks will be dynamically added here -->
+            <div class="empty-state">
+                <i class="fas fa-clipboard-list"></i>
+                <h4>No tasks yet</h4>
+                <p>Add your first task to get started!</p>
+            </div>
+        </div>
+
+        <!-- AI Task Suggestions -->
+        <div class="ai-suggestions">
+            <h4><i class="fas fa-robot"></i> AI Suggestions</h4>
+            <div class="suggestion-list">
+                <div class="suggestion" data-task="Review JavaScript closures">
+                    Review JavaScript closures concept
+                    <button class="btn-add-suggestion">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="suggestion" data-task="Complete React hooks tutorial">
+                    Complete React hooks tutorial
+                    <button class="btn-add-suggestion">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="suggestion" data-task="Practice CSS Grid exercises">
+                    Practice CSS Grid exercises
+                    <button class="btn-add-suggestion">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Todo List Functionality
+class TodoList {
+    constructor() {
+        this.tasks = JSON.parse(localStorage.getItem('learnsmart-tasks')) || this.getDefaultTasks();
+        this.currentFilter = 'all';
+        this.currentCategory = 'all';
+        this.init();
+    }
+
+    getDefaultTasks() {
+        return [
+            {
+                id: 1,
+                title: 'Complete JavaScript assessment test',
+                completed: false,
+                category: 'study',
+                priority: true,
+                dueDate: new Date(Date.now() + 86400000).toISOString().split('T')[0], // Tomorrow
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 2,
+                title: 'Review React hooks documentation',
+                completed: false,
+                category: 'study',
+                priority: false,
+                dueDate: new Date(Date.now() + 172800000).toISOString().split('T')[0], // Day after tomorrow
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 3,
+                title: 'Prepare weekly learning plan',
+                completed: true,
+                category: 'work',
+                priority: true,
+                dueDate: new Date().toISOString().split('T')[0], // Today
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 4,
+                title: 'Practice CSS Grid exercises',
+                completed: false,
+                category: 'study',
+                priority: false,
+                dueDate: null,
+                createdAt: new Date().toISOString()
+            }
+        ];
+    }
+
+    init() {
+        this.render();
+        this.setupEventListeners();
+        this.updateStats();
+    }
+
+    saveToLocalStorage() {
+        localStorage.setItem('learnsmart-tasks', JSON.stringify(this.tasks));
+    }
+
+    generateId() {
+        return this.tasks.length > 0 ? Math.max(...this.tasks.map(t => t.id)) + 1 : 1;
+    }
+
+    addTask(title, category = 'study', priority = false, dueDate = null) {
+        if (!title.trim()) return;
+
+        const newTask = {
+            id: this.generateId(),
+            title: title.trim(),
+            completed: false,
+            category: category,
+            priority: priority,
+            dueDate: dueDate,
+            createdAt: new Date().toISOString()
+        };
+
+        this.tasks.unshift(newTask);
+        this.saveToLocalStorage();
+        this.render();
+        this.updateStats();
+        this.showNotification('Task added successfully!', 'success');
+    }
+
+    toggleTask(id) {
+        const task = this.tasks.find(t => t.id === id);
+        if (task) {
+            task.completed = !task.completed;
+            this.saveToLocalStorage();
+            this.render();
+            this.updateStats();
+            
+            if (task.completed) {
+                this.showNotification('Task completed! Great job! 🎉', 'success');
+            }
+        }
+    }
+
+    deleteTask(id) {
+        const taskIndex = this.tasks.findIndex(t => t.id === id);
+        if (taskIndex !== -1) {
+            this.tasks.splice(taskIndex, 1);
+            this.saveToLocalStorage();
+            this.render();
+            this.updateStats();
+            this.showNotification('Task deleted', 'info');
+        }
+    }
+
+    editTask(id, updates) {
+        const taskIndex = this.tasks.findIndex(t => t.id === id);
+        if (taskIndex !== -1) {
+            this.tasks[taskIndex] = { ...this.tasks[taskIndex], ...updates };
+            this.saveToLocalStorage();
+            this.render();
+            this.updateStats();
+            this.showNotification('Task updated successfully!', 'success');
+        }
+    }
+
+    togglePriority(id) {
+        const task = this.tasks.find(t => t.id === id);
+        if (task) {
+            task.priority = !task.priority;
+            this.saveToLocalStorage();
+            this.render();
+            this.updateStats();
+            this.showNotification(task.priority ? 'Task marked as priority!' : 'Priority removed', 'info');
+        }
+    }
+
+    clearCompleted() {
+        const completedCount = this.tasks.filter(t => t.completed).length;
+        if (completedCount === 0) {
+            this.showNotification('No completed tasks to clear', 'info');
+            return;
+        }
+
+        if (confirm(`Clear ${completedCount} completed task(s)?`)) {
+            this.tasks = this.tasks.filter(t => !t.completed);
+            this.saveToLocalStorage();
+            this.render();
+            this.updateStats();
+            this.showNotification('Completed tasks cleared!', 'success');
+        }
+    }
+
+    setFilter(filter) {
+        this.currentFilter = filter;
+        this.render();
+    }
+
+    setCategory(category) {
+        this.currentCategory = category;
+        this.render();
+    }
+
+    sortTasks() {
+        // Sort by: priority > due date > creation date
+        this.tasks.sort((a, b) => {
+            // Priority first
+            if (a.priority && !b.priority) return -1;
+            if (!a.priority && b.priority) return 1;
+            
+            // Then by due date (tasks without due date go last)
+            if (a.dueDate && !b.dueDate) return -1;
+            if (!a.dueDate && b.dueDate) return 1;
+            if (a.dueDate && b.dueDate) {
+                return new Date(a.dueDate) - new Date(b.dueDate);
+            }
+            
+            // Then by creation date (newest first)
+            return new Date(b.createdAt) - new Date(a.createdAt);
+        });
+        
+        this.saveToLocalStorage();
+        this.render();
+        this.showNotification('Tasks sorted!', 'info');
+    }
+
+    getFilteredTasks() {
+        let filtered = [...this.tasks];
+
+        // Apply category filter
+        if (this.currentCategory !== 'all') {
+            filtered = filtered.filter(task => task.category === this.currentCategory);
+        }
+
+        // Apply status filter
+        switch (this.currentFilter) {
+            case 'active':
+                return filtered.filter(task => !task.completed);
+            case 'completed':
+                return filtered.filter(task => task.completed);
+            case 'priority':
+                return filtered.filter(task => task.priority);
+            default:
+                return filtered;
+        }
+    }
+
+    updateStats() {
+        const totalTasks = this.tasks.length;
+        const completedTasks = this.tasks.filter(t => t.completed).length;
+        
+        document.getElementById('totalTasks').textContent = totalTasks;
+        document.getElementById('tasksCompleted').textContent = completedTasks;
+        
+        // Add animation to stats
+        const statsElement = document.querySelector('.task-stats');
+        statsElement.classList.remove('updated');
+        void statsElement.offsetWidth; // Trigger reflow
+        statsElement.classList.add('updated');
+    }
+
+    showNotification(message, type = 'info') {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+            <span>${message}</span>
+        `;
+        
+        // Add to DOM
+        document.body.appendChild(notification);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.classList.add('fade-out');
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+            }, 300);
+        }, 3000);
+    }
+
+    render() {
+        const taskListElement = document.getElementById('taskList');
+        const filteredTasks = this.getFilteredTasks();
+
+        if (filteredTasks.length === 0) {
+            const emptyState = `
+                <div class="empty-state">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>No tasks found</h4>
+                    <p>${this.currentFilter === 'completed' ? 'No completed tasks yet' : 
+                         this.currentFilter === 'priority' ? 'No priority tasks' : 
+                         this.currentCategory !== 'all' ? `No ${this.currentCategory} tasks` : 
+                         'Add your first task to get started!'}</p>
+                </div>
+            `;
+            taskListElement.innerHTML = emptyState;
+            return;
+        }
+
+        let tasksHTML = '';
+        
+        filteredTasks.forEach(task => {
+            const dueDate = task.dueDate ? new Date(task.dueDate) : null;
+            const isDueSoon = dueDate && dueDate - new Date() < 86400000 && !task.completed; // Less than 24 hours
+            const isOverdue = dueDate && dueDate < new Date() && !task.completed;
+            
+            tasksHTML += `
+                <div class="task-item ${task.completed ? 'completed' : ''} ${task.priority ? 'priority' : ''}" data-id="${task.id}">
+                    <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="todoList.toggleTask(${task.id})"></div>
+                    <div class="task-content">
+                        <div class="task-title ${task.completed ? 'completed' : ''}">${task.title}</div>
+                        <div class="task-meta">
+                            <span class="task-category">${task.category}</span>
+                            ${dueDate ? `
+                                <span class="task-due ${isOverdue ? 'urgent' : isDueSoon ? 'warning' : ''}">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    ${dueDate.toLocaleDateString()} 
+                                    ${isOverdue ? ' (Overdue!)' : isDueSoon ? ' (Due soon)' : ''}
+                                </span>
+                            ` : ''}
+                        </div>
+                    </div>
+                    <div class="task-actions">
+                        <button class="task-btn btn-priority" onclick="todoList.togglePriority(${task.id})" title="${task.priority ? 'Remove priority' : 'Mark as priority'}">
+                            <i class="fas fa-flag${task.priority ? '' : '-o'}"></i>
+                        </button>
+                        <button class="task-btn btn-edit" onclick="todoList.openEditModal(${task.id})" title="Edit task">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="task-btn btn-delete" onclick="todoList.deleteTask(${task.id})" title="Delete task">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        });
+
+        taskListElement.innerHTML = tasksHTML;
+    }
+
+    openEditModal(taskId) {
+        const task = this.tasks.find(t => t.id === taskId);
+        if (!task) return;
+
+        // Create modal if it doesn't exist
+        let modal = document.querySelector('.task-edit-modal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.className = 'task-edit-modal';
+            modal.innerHTML = `
+                <div class="task-edit-content">
+                    <h3><i class="fas fa-edit"></i> Edit Task</h3>
+                    <div class="edit-form">
+                        <div class="edit-form-group">
+                            <label for="editTaskTitle">Task Title</label>
+                            <input type="text" id="editTaskTitle" placeholder="Enter task title">
+                        </div>
+                        <div class="edit-form-group">
+                            <label for="editTaskCategory">Category</label>
+                            <select id="editTaskCategory">
+                                <option value="study">Study</option>
+                                <option value="work">Work</option>
+                                <option value="personal">Personal</option>
+                                <option value="urgent">Urgent</option>
+                            </select>
+                        </div>
+                        <div class="edit-form-group">
+                            <label for="editTaskPriority">
+                                <input type="checkbox" id="editTaskPriority">
+                                Mark as Priority
+                            </label>
+                        </div>
+                        <div class="edit-form-group">
+                            <label for="editTaskDueDate">Due Date (Optional)</label>
+                            <input type="date" id="editTaskDueDate">
+                        </div>
+                        <div class="edit-actions">
+                            <button class="btn btn-outline" id="cancelEditBtn">Cancel</button>
+                            <button class="btn btn-primary" id="saveEditBtn">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            
+            // Add event listeners for modal
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+            
+            document.getElementById('cancelEditBtn').addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+            
+            document.getElementById('saveEditBtn').addEventListener('click', () => {
+                this.saveEdit(taskId);
+            });
+        }
+
+        // Populate form with task data
+        document.getElementById('editTaskTitle').value = task.title;
+        document.getElementById('editTaskCategory').value = task.category;
+        document.getElementById('editTaskPriority').checked = task.priority;
+        document.getElementById('editTaskDueDate').value = task.dueDate || '';
+        
+        // Store task ID in modal
+        modal.dataset.editTaskId = taskId;
+        
+        // Show modal
+        modal.classList.add('active');
+    }
+
+    saveEdit(taskId) {
+        const title = document.getElementById('editTaskTitle').value.trim();
+        if (!title) {
+            this.showNotification('Task title cannot be empty', 'error');
+            return;
+        }
+
+        const updates = {
+            title: title,
+            category: document.getElementById('editTaskCategory').value,
+            priority: document.getElementById('editTaskPriority').checked,
+            dueDate: document.getElementById('editTaskDueDate').value || null
+        };
+
+        this.editTask(taskId, updates);
+        
+        // Close modal
+        const modal = document.querySelector('.task-edit-modal');
+        if (modal) {
+            modal.classList.remove('active');
+        }
+    }
+
+    setupEventListeners() {
+        // Add task button
+        document.getElementById('addTaskBtn').addEventListener('click', () => {
+            const input = document.getElementById('newTaskInput');
+            const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+            this.addTask(input.value, activeCategory === 'urgent' ? 'study' : activeCategory, activeCategory === 'urgent');
+            input.value = '';
+            input.focus();
+        });
+
+        // Add task on Enter key
+        document.getElementById('newTaskInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                document.getElementById('addTaskBtn').click();
+            }
+        });
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.setFilter(e.target.dataset.filter);
+            });
+        });
+
+        // Category buttons
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.setCategory(e.target.dataset.category);
+            });
+        });
+
+        // Clear completed button
+        document.getElementById('clearCompletedBtn').addEventListener('click', () => {
+            this.clearCompleted();
+        });
+
+        // Sort button
+        document.getElementById('sortTasksBtn').addEventListener('click', () => {
+            this.sortTasks();
+        });
+
+        // AI suggestion buttons
+        document.querySelectorAll('.btn-add-suggestion').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const suggestion = e.target.closest('.suggestion');
+                const taskText = suggestion.dataset.task;
+                const activeCategory = document.querySelector('.category-btn.active').dataset.category;
+                
+                this.addTask(taskText, activeCategory === 'urgent' ? 'study' : activeCategory, activeCategory === 'urgent');
+                
+                // Visual feedback
+                suggestion.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    suggestion.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // Click on entire suggestion
+        document.querySelectorAll('.suggestion').forEach(suggestion => {
+            suggestion.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('btn-add-suggestion')) {
+                    const addBtn = suggestion.querySelector('.btn-add-suggestion');
+                    addBtn.click();
+                }
+            });
+        });
+    }
+}
+
+// Initialize todo list when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Add notification styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10000;
+            animation: slideInRight 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .notification-success {
+            border-left-color: var(--success);
+        }
+        
+        .notification-success i {
+            color: var(--success);
+        }
+        
+        .notification-info {
+            border-left-color: var(--primary);
+        }
+        
+        .notification-info i {
+            color: var(--primary);
+        }
+        
+        .notification-error {
+            border-left-color: var(--danger);
+        }
+        
+        .notification-error i {
+            color: var(--danger);
+        }
+        
+        .fade-out {
+            animation: fadeOut 0.3s ease forwards;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+        
+        .task-checkbox {
+            cursor: pointer;
+        }
+        
+        .task-checkbox:hover {
+            border-color: var(--primary);
+        }
+        
+        .task-btn {
+            cursor: pointer;
+        }
+        
+        .category-btn[data-category="study"] {
+            color: #4361ee;
+        }
+        
+        .category-btn[data-category="work"] {
+            color: #4cc9f0;
+        }
+        
+        .category-btn[data-category="personal"] {
+            color: #7209b7;
+        }
+        
+        .category-btn[data-category="urgent"] {
+            color: #f72585;
+        }
+        
+        .task-category {
+            text-transform: capitalize;
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Initialize todo list
+    window.todoList = new TodoList();
+});
+
+// Make todoList accessible globally
+let todoList;
+    </script>
+</div>
+</body>
+</html>

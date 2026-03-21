@@ -1,0 +1,77 @@
+body {
+  background-color: #000000;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+  gap: 5vw;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-card{
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  color: black;
+  height: 50vh;
+  width: 25vw;
+}
+
+.home {
+  padding: 40px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: black;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: rgba(0, 0, 0, 0.523);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}

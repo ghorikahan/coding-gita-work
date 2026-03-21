@@ -1,0 +1,699 @@
+2nd  assignment.
+1.Write a program to input an integer and print whether it is zero or non-zero.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a ;
+     scanf("%d",\\\&a);
+
+    \*\*\*if(a==0){\*\*\*
+
+        \*\*\*printf("the value is zero");
+
+    \*\*\*}\*\*\*
+
+    \*\*\*else{\*\*\*
+
+        \*\*\*printf("the value is not zero");\*\*\*
+
+    \*\*\*}\*\*\*
+
+    
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+2.Write a program to check if a number is divisible by 4.
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int a;***
+     \*\*\*scanf("%d",\\\&a);\*\*\*
+
+     \*\*\*if(a%4==0){\*\*\*
+
+         \*\*\*printf("the number is divisible by 4");\*\*\*
+
+         
+
+             \*\*\*}\*\*\*
+
+             \*\*\*else{\*\*\*
+
+                 \*\*\*printf("this value is not divisible by 4");\*\*\*
+
+             \*\*\*}\*\*\*
+
+     
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+3.Write a program to input two numbers and print the smaller one.
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int a,b;***
+     \*\*\*scanf("%d",\\\&a);\*\*\*
+
+     \*\*\*scanf("%d",\\\&b);\*\*\*
+
+     \*\*\*if(a>b){\*\*\*
+
+         \*\*\*printf("the smaller value is %d",b );\*\*\*
+
+     \*\*\*}\*\*\*
+
+     \*\*\*else{\*\*\*
+
+         \*\*\*printf("the smaller value is %d",a);\*\*\*
+
+     \*\*\*}\*\*\*
+
+     
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+4.Write a program to check whether a number is a multiple of 10.
+ans:-#include <stdio.h>
+
+int main()
+{
+    ***int a;***
+    \*\*\*scanf("%d",\\\&a);\*\*\*
+
+    \*\*\*if(a%10==0){\*\*\*
+
+        \*\*\*printf("the value is divisible by 10" );\*\*\*
+
+    \*\*\*}\*\*\*
+
+    \*\*\*else{\*\*\*
+
+        \*\*\*printf("the value  is not divisible by 10 ");\*\*\*
+
+    \*\*\*}\*\*\*
+
+      
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+ 
+6)write a program to input a float value and check weather it is greater than 5.5 or not.
+ans:- #include <stdio.h>
+
+int main()
+{
+     ***float a ;***
+     \*\*\*scanf("%f",\\\&a);\*\*\*
+
+     \*\*\*if(a>5.5){\*\*\*
+
+         \*\*\*printf(" %fis greater then 5.5  ",a);\*\*\*
+
+     \*\*\*}\*\*\*
+
+     \*\*\*else{\*\*\*
+
+         \*\*\*printf(" %f is less than 5.5 ",a);\*\*\*
+
+     \*\*\*}\*\*\*
+
+     
+
+      
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+7)Write a program to check whether a single digit integer is even or odd.
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int a;***
+     \*\*\*scanf("%d",\\\&a);\*\*\*
+
+     \*\*\*if(a%2==0){\*\*\*
+
+         \*\*\*printf("%d is even",a);\*\*\*
+
+         
+
+     \*\*\*}\*\*\*
+
+     \*\*\*else{\*\*\*
+
+         \*\*\*printf("%d is odd",a);\*\*\*
+
+     \*\*\*}\*\*\*
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+8)Write a program to input a char and check whether it is a digit or not.
+ans:-
+9)Write a program to convert int to float using type casting and print both.
+ans:-#include <stdio.h>
+
+int main()
+{
+    ***int a;***
+    \*\*\*float b=(float)a;\*\*\*
+
+    \*\*\*scanf("%d",\\\&a);\*\*\*
+
+    \*\*\*scanf("%f",\\\&b);\*\*\*
+
+    \*\*\*printf("%d",a);\*\*\*
+
+    \*\*\*printf("%f",b);\*\*\*
+
+    
+
+    
+
+
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+10)Write a program to divide two integers and use type casting to show accurate decimal output.
+ans:-#include <stdio.h>
+
+int main()
+{
+    ***int a,b;***
+    \*\*\*scanf("%d",\\\&a);\*\*\*
+
+    \*\*\*scanf("%d",\\\&b);\*\*\*
+
+    \*\*\*float c = (float)a/b;\*\*\*
+
+    \*\*\*printf("the value is %f",c);\*\*\*
+
+    
+
+    
+
+
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+11)Write a program to input a float and truncate it (i.e., print integer part only).
+ans:-#include <stdio.h>
+
+int main()
+{
+    ***float a;***
+    \*\*\*scanf("%f",\\\&a);\*\*\*
+
+    \*\*\*int b= (int) a;\*\*\*
+
+    \*\*\*printf("%d",b);\*\*\*
+
+     
+
+    
+
+    
+
+
+
+
+
+    \*\*\*return 0;\*\*\*
+
+
+
+}
+12)Write a program to input an integer and print its ASCII character using casting.
+ans:-
+13)Write a program to add int and float and print the result using implicit conversion.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     float b;
+     scanf("%d",&a);
+     scanf("%f",&b);
+     float c=(float)a;
+     
+     float result=c+b;
+     printf("the sum is %f",result);
+     
+     
+     
+
+    return 0;
+}
+14)Write a program to input a float and convert it to int using (int) cast, then print both.
+ans:-#include <stdio.h>
+
+int main()
+{
+      float a;
+      scanf("%f",&a);
+      int b = (int) a;
+      printf("%d\n",b);
+      printf("%f\n",a);
+      
+     
+
+    return 0;
+}
+If-Else Statements
+Q15.
+Write a program to input age and print if the person is a senior citizen (age ≥ 60).
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int a;***
+
+     ***scanf("  %d",\&a);***
+
+     ***if(a>=60){***
+
+         ***printf("you are a senior citizen");***
+
+     ***}***
+
+     ***else{***
+
+         ***printf("you are not a senior citizen");***
+
+     ***}***
+
+
+
+    ***return 0;***
+
+}
+
+
+Q16.
+Write a program to input a year and check if it is before or after 2000.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     if(a>2000){
+         printf("%d the year is after the year 2000",a);
+     }
+         else{
+             printf("%d the year is before the year 2000 ",a);
+         }
+ 
+ 
+ 
+
+    return 0;
+}
+
+Q17.
+Write a program to input marks and print if the grade is ‘Pass’ (≥33) or ‘Fail’.
+ans :-#include <stdio.h>
+
+int main()
+{
+      ***int a;***
+
+      ***scanf("%d",\&a);***
+
+      ***if(a>=33){***
+
+          ***printf("you are pass ");***
+
+          
+
+      ***}***
+
+      ***else{***
+
+          ***printf("better luck next time you are failed ");***
+
+      ***}***
+
+          
+
+     
+
+
+
+    ***return 0;***
+
+}
+
+
+Q18.
+Write a program to input a number and print whether it is a 3-digit number or not.
+ans:-  #include <stdio.h>
+
+int main()
+{
+    
+      int a;
+      scanf("%d",&a);
+      if(a>=100){
+          if(a<1000){
+              
+          
+          printf(" the number is a three digit number ");
+          }
+          else{
+              printf(" the number is not a three digigt number ");
+              
+          }
+      }
+       
+       else{
+              printf(" the number is not a three digigt number ");
+              
+          }
+          
+     
+
+    return 0;
+}
+
+Q19.
+Write a program to input speed and check if it is within speed limit (≤ 60).
+ans:- #include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     if(a<=60){
+         printf("you are in speed limit ");
+     }
+     else{
+         printf("you are not in the speed limit ,slow down your speed");
+     }
+    return 0;
+}
+
+
+
+Q20.
+Write a program to check if a number is outside the range 10 to 50.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     
+     if(a>10){
+          
+         if(a<50){
+             
+         
+         printf("number is in the range of 10 to 50 ");
+         }
+         else{
+             printf(" number not in the  range of 10 to 50");
+         }
+     }
+     else{
+         printf(" number not in the  range of 10 to 50");
+     }
+    return 0;
+}
+
+Q21.
+Write a program to input a number and print whether it is greater than or equal to 100.
+ans:- #include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     if(a>100){
+         printf("the value is greater than 100  ");
+         
+     }
+     else if(a==100){
+         printf("the value is equal to 100");
+     }
+     else{
+        printf("the value is less then 100");
+     }
+     
+     
+          
+          
+     
+
+    return 0;
+}
+
+Q22.
+Write a program to input the number of hours worked and print “Overtime” if > 40 hours.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     if(a> 40){
+         printf(" you are doing overtime.");
+         
+     }
+      
+     
+     else{
+        printf(" you are working regularly but not overtiming.");
+     }
+     
+     
+          
+          
+     
+
+    return 0;
+}
+
+Q23.
+Write a program to input your height in cm and print whether you're tall (height > 170 cm).
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     if(a> 170){
+         printf(" you are  tall .");
+         
+     }
+      
+     
+     else{
+        printf("  you are not tall.");
+     }
+     
+     
+          
+          
+     
+
+    return 0;
+}
+
+Q24.
+Write a program to input your monthly income and check if it is above ₹25,000 or not.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+     if(a>  25000){
+         printf("  your income is more than 25000");
+         
+     }
+      
+     
+     else{
+        printf("  your income is  less than 25000.");
+     }
+     
+     
+          
+          
+     
+
+    return 0;
+}
+
+Q25.
+Write a program to input two subject marks and print whether both are above 50.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a,b;
+     scanf("%d",&a);
+      scanf("%d",&b);
+      int c=a+b;
+      if(c>50){
+          printf(" marks are more than 50 in both subjects");
+          
+      }
+      else{
+          printf("you have less than 50 marks in both subjects");
+      }
+    return 0;
+}
+
+Q26.
+Write a program to input the cost price and selling price of an item and print if it is a profit or loss.
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a,b;
+     scanf("%d",&a);
+      scanf("%d",&b);
+      int c= b-a;
+      if(c<0){
+          printf("  you have a loss of %d",c);
+          
+      }
+      else{
+          printf(" you have a profit of %d",c);
+      }
+    return 0;
+}
+
+
+
+Q27.
+Write a program to input number of items bought, and if more than 10, print "Bulk Order", else print "Small Order".
+ans:-#include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+       if(a<10){
+          printf(" you have a small order of  %d",a);
+          
+      }
+      else{
+          printf("  you have a blk order of %d",a);
+      }
+    return 0;
+}
+
+
+
+Q28.
+Write a program to input your age, and print if you are eligible for senior discount (≥ 60).
+ans:- #include <stdio.h>
+
+int main()
+{
+     int a;
+     scanf("%d",&a);
+       if(a>=60){
+          printf("  you are eligible for the senior citizen discount  " );
+          
+      }
+      else{
+          printf("    you are not eligible for the senior citizen discount  " );
+      }
+    return 0;
+}
+
+
+Q29.
+Write a program to input 2 test marks and check if both are passed (≥ 40).
+ans:- #include <stdio.h>
+
+int main()
+{
+     int a,b;
+     scanf("%d",&a);
+     scanf("%d",&b);
+       if(a>=40){ 
+           
+          if(b>=40){
+              printf("you are pass");
+              
+          }
+          else{
+              printf("you are pass only in a");
+          }
+          
+      }
+      else if(b>=40){
+          printf(" you are pass in only b" );
+      }
+      else{
+          printf(" you are fail");
+      }
+    return 0;
+}
+
+
+Q30.
+Write a program to input number of family members and print whether it's a nuclear family (≤ 4) or joint family.
+ans:-#include <stdio.h>
+
+int main()
+{
+      int a;
+      scanf("%d",&a);
+      if(a<=4){
+          printf("you are living in a  nuclear family of %d",a);
+          
+      }
+      else{
+          printf("you are living in a joint family of%d",a);
+      }
+    return 0;
+}
+

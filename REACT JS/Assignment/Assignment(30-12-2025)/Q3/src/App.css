@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.click-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+}
+
+.inc-btn {
+    height: 5vh;
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 560;
+}
+
+.dec-btn {
+    height: 5vh;
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 560;
+}
+
+.inc-btn:hover {
+    border: 2px solid red;
+}
+
+.dec-btn:hover {
+    border: 2px solid red;
+}
+
+.btn {
+    display: flex;
+    gap: 1vw;
+}

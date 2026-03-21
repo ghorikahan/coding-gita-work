@@ -1,0 +1,266 @@
+1st assignment.
+1.write a program to find maximum number between two numbers.
+ans:-#include <stdio.h>
+
+int main()
+
+{
+    ***int a,b;***
+
+    ***scanf("%d",\&a);***
+
+    ***scanf("%d",\&b);***
+
+    ***if(a>b){***
+
+        ***printf("a is maximum number");***
+
+        
+
+    ***}***
+
+    ***else{***
+
+        ***printf("b is maximum number");***
+
+    ***}***
+
+
+
+    ***return 0;***
+
+}
+
+
+2.write a program to check weather a number is positive or negative.
+
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int a;***
+
+    ***scanf("%d",\&a);***
+
+if(a>=0){
+       ***printf("value is positive%d",a);***
+
+       
+
+    ***}***
+
+    ***else{***
+
+        ***printf("value is negative%d",a);***
+
+    ***}***
+
+return 0;
+}
+3.write a program to check weather a number is even or odd .
+ans:-#include <stdio.h>
+
+int main()
+{
+
+    ***int a;***
+
+    ***scanf("%d\\n",\&a);***
+
+    ***if(a%2==0){***
+
+        ***printf("even");***
+
+    ***}***
+
+    ***else{***
+
+        ***printf("  odd");***
+
+    ***}***
+
+    
+
+    
+
+     
+
+      
+
+
+
+    ***return 0;***
+
+}
+4.write a program to add 2 number and check it is divisible by 7 or not.
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int a,b,c;***
+
+      
+
+     ***scanf("%d",\&a);***
+
+     ***scanf("%d",\&b);***
+
+      ***c=a+b;***
+
+     ***if(c%7==0){***
+
+         ***printf("c is divisible by 7");***
+
+     ***}***
+
+     ***else{***
+
+         ***printf("c is not divisible by 7");***
+
+     ***}***
+
+     
+
+     
+
+     
+
+      
+
+
+
+    ***return 0;***
+
+}
+5.write a program to multiplie 2 numbers and add 27 and subtract 15 and check it is greater than 359 or not.
+ans:-#include <stdio.h>
+
+int main()
+{
+      ***int a,b,c;***
+
+      ***scanf("%d",\&a);***
+
+      ***scanf("%d",\&b);***
+
+      ***c=a\*b;***
+
+      ***int d=c+27-15;***
+
+      ***if(d>359){***
+
+          ***printf("it is greater than 359");***
+
+          
+
+      ***}***
+
+      ***else{***
+
+          ***printf("it is less than 359");***
+
+      ***}***
+
+      
+
+     
+
+     
+
+     
+
+      
+
+
+
+    ***return 0;***
+
+}
+6.write a program to take students marks of maths,sci,hindi,english.then check if total is greater than 205 or not .if total is greater than 205 then print pass else fail.
+ans:-#include <stdio.h>
+
+int main()
+{
+     ***int english ,hindi ,maths,science;***
+
+     ***scanf("%d",\&maths);*** 
+
+     ***scanf("%d",\&science);***
+
+     ***scanf("%d",\&hindi);***
+
+     ***scanf("%d",\&english);***
+
+     ***int total = maths+hindi+english+science;***
+
+     ***if(total>205){***
+
+         ***printf("you are pass %d",total);***
+
+         
+
+     ***}***
+
+     ***else{***
+
+         ***printf("you are fail %d",total);***
+
+     ***}***
+
+     
+
+    ***return 0;***
+
+}
+7.write a program to check weither it is divisible by 5 or not.
+ans:-#include <stdio.h>
+
+int main()
+{
+       ***int a;***
+
+       ***scanf("%d",\&a);***
+
+       ***if(a%5==0){***
+
+           ***printf(" %d is divisible by 5 ",a);***
+
+       ***}***
+
+       ***else{***
+
+           ***printf("%d is not divisible by 5",a);***
+
+           
+
+       ***}***
+
+     
+
+    ***return 0;***
+
+}
+8.write a program to print your name ,address,and dob.
+ans:-#include <stdio.h>
+
+int main()
+{
+    ***int dob;***
+
+    ***int name,address;***
+
+   
+
+    ***scanf("%d\\n",\&dob);***
+
+    ***printf("name = Ghori kahan N\\n");***
+
+    ***printf("address=block no:- 10, ashanti appartment, kalol,ghandhinagar\\n");***
+
+    
+
+         
+
+    ***return 0;***
+
+}
