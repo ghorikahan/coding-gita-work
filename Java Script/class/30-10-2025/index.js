@@ -1,1 +1,0 @@
-function str(let a,let b)

@@ -1,7 +1,0 @@
-hello world.
-my name is ghori kahan.
-i am from gujarat.
-add user login feature.
-Fix navigation bug
-Update documentation.
-Add new styling

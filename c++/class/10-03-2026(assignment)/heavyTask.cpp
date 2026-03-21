@@ -1,0 +1,104 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+class Book
+{
+private:
+    int bookId;
+    string authorName;
+    string bookTitle;
+
+public:
+    Book(int id, string name, string title)
+    {
+        if (id > 0)
+        {
+            bookId = id;
+            authorName = name;
+            bookTitle = title;
+        }
+        else
+        {
+            cout << " data sent is invalid" << endl;
+        }
+    }
+
+    friend void readFile(Book &obj);
+    friend void writeFile(Book &obj);
+};
+
+void readFile(Book &obj)
+{
+    try
+    {
+        ifstream file("book.txt");
+        string line;
+
+        if (file.is_open())
+        {
+            while (getline(file, line))
+            {
+                cout << line << endl;
+            }
+            file.close();
+        }
+        else
+            throw "file did not exist";
+    }
+
+    catch (string str)
+    {
+        cout << str << endl;
+    }
+}
+
+void writeFile(Book &obj)
+{
+    ofstream file("book.txt", ios::app);
+    if (file.is_open())
+    {
+        file << "book name is: " << obj.bookTitle << endl;
+        file << "author name is: " << obj.authorName << endl;
+        file << "its id is: " << obj.bookId << endl
+             << endl;
+        file.close();
+    }
+}
+
+void getInfoByTitle(string name)
+{
+    ifstream file("book.txt");
+    string line;
+    string lineCheck = "book name is: " + name;
+    if (file.is_open())
+    {
+        while (getline(file, line))
+        {
+            if (line == lineCheck)
+            {
+                cout << line << endl;
+                int count = 1;
+                while (getline(file, line))
+                {
+                    cout << line << endl;
+                    count++;
+                    if (count == 3)
+                        break;
+                }
+                break;
+            }
+        }
+        file.close();
+    }
+}
+
+int main()
+{
+    Book p1(1, "james clear", "atomic habits");
+    // writeFile(p1);
+    // readFile(p1);
+    getInfoByTitle("atomic habits");
+    return 0;
+}

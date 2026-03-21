@@ -1,0 +1,961 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1.5vw;
+}
+
+.fixednavbar {
+  position: sticky;
+  box-shadow: 1px 1.5px 1px 1px rgba(96, 41, 41, 0.199);
+  background-color: white;
+  top: 0;
+  width: 100vw;
+  padding-top: .4vw;
+  z-index: 3;
+}
+
+[alt="logo"] {
+  height: 1.5vw;
+}
+
+[alt="searchicon1"] {
+  height: 3vh;
+  padding-left: .5vw;
+}
+
+[alt="searchicon2"] {
+  height: 4vh;
+}
+
+.backclr {
+  background-color: rgb(0, 175, 239);
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: .5vw;
+  width: 7vw;
+  border-top-right-radius: .5vw;
+  border-bottom-right-radius: .5vw;
+  padding: .2vw;
+}
+
+.searchbar {
+  height: 5vh;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: .3vw;
+  border-bottom-left-radius: .3vw;
+  border: .1rem solid rgba(0, 0, 0, 0.162);
+}
+
+.mainsearchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[alt="cart"] {
+  height: 4vh;
+}
+
+[alt="Login"] {
+  height: 4vh;
+}
+
+.cart-login {
+  display: flex;
+  gap: 1.2vw;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.longline {
+  height: .1vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.192);
+  margin-top: 1vw;
+}
+
+.navlinks {
+  display: flex;
+  gap: 2vw;
+  font-size: .85rem;
+  opacity: .8;
+}
+
+.navlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+}
+
+[alt="maincontent"] {
+  height: 55vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  /* margin-top: 18vh; */
+}
+
+.text {
+  width: 60vw;
+}
+
+.background {
+  height: 6vh;
+  width: 8vw;
+  background-color: rgb(0, 175, 239);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  border-radius: .5rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 13vw;
+}
+
+.aligncenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vw;
+}
+
+.bestseller {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.allproducts {
+  padding-top: 3vw;
+  display: flex;
+  justify-content: center;
+}
+
+.product1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1.5px solid rgba(0, 0, 0, 0.126);
+  border-radius: .5vw;
+  width: 20vw;
+  gap: 1vw;
+}
+
+.product1img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761756143/1_132_umjvzk.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product2img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761801287/with-ingredient_1_rcvgtt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product3img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761801293/1_128_qhalgp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product4img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761801301/fop_35_t4ppas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product5img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761825096/rosemary_shampoo_1l_white_bg_kmn4jd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product6img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761825101/2_22_votfw4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product7img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761825110/1_white_bg_31_ar7qoc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product8img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761825119/with-ingredients_2_erwbdn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product9img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761826922/1_124_vo7ajg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product10img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761826931/rice-fw_1_yxjhzi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product11img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761826939/vit-c-glow-cream1_kp6jke.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product12img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761826945/1_201_wlvkso.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product13img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761839468/1_193_opmpg7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product14img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761839473/1_194_uoe5gm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product15img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761839482/1_205_oqvwre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product16img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761839488/1_204_dvx4n9.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product17img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840111/1_156_gazlrl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product18img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840118/1_159_fceqzi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product19img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840124/1_154_uesnxb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product20img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840135/nourishing-bathing-bars_2_anb6wlrvagej2noa_yqfwdm.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product21img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840563/1_66_re14fp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product22img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840569/1_1__2_sggnx6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product23img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840574/1_110_zigppd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product24img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761840583/1_64_seckvj.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product25img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761841187/onion-conditioner-ingredients_ifkr8n.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product26img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761841195/rosemary_oil_xg5vxl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product27img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761841200/_onion-oil-150ml__1_htpjc7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product28img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761841206/1_156_je9eqq.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product29img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842038/with-claim_sfqofr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product30img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842049/_onion-oil-250ml__1_1_1_p0eese.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product31img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842052/with_claim_duh8my.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product32img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842060/3_58_hyudrr.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product33img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842488/1_56_vxwfus.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product34img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842494/1_205_tuzrvv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product35img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842501/1_207_qzyoap.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product36img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842508/glow_serumred_fop_white_bg_insrh0.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product37img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842568/1_white_bg_50_cjc2wl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product38img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842574/1_fop_white_bg_1_ospu49.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product39img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842581/1_white_bg_54_pezyre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.product40img {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761842592/1_white_bg_51_mnyqwb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.bogo {
+  height: 4vh;
+  width: 4vw;
+  padding: .2vw;
+  font-size: .9rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  background-color: rgb(130, 195, 65);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredient {
+  color: rgb(75, 139, 11);
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+.productname {
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5vw;
+}
+
+.prorat {
+  display: flex;
+  align-items: center;
+  gap: .5vw;
+}
+
+.ratingstar {
+  color: rgb(255, 195, 0);
+}
+
+[alt="verified"] {
+  height: 2vh;
+}
+
+.addtocart {
+  height: 7vh;
+  background-color: rgb(0, 175, 239);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  color: white;
+}
+
+.center {
+  height: 3vh;
+  width: 4vw;
+  background-color: rgba(49, 90, 8, 0.687);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+}
+
+del {
+  opacity: .7;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  gap: .5vw;
+}
+
+.incorrectprice {
+  display: flex;
+}
+
+.productrow1 {
+  display: flex;
+  gap: 1vw;
+}
+
+.aligncenter2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vw;
+}
+
+.thunder {
+  height: 3.5vh;
+  width: 8vw;
+  padding: .2vw;
+  font-size: .9rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  background-color: rgb(170, 75, 212);
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[alt="thunderimg"] {
+  height: 3vh;
+}
+
+.font {
+  font-size: .8rem;
+}
+
+.trending {
+  background-color: rgb(255, 153, 0);
+  height: 4vh;
+  width: 7vw;
+  color: white;
+  font-size: .9rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lowstock {
+  background-color: rgb(130, 195, 65);
+  height: 4vh;
+  width: 9vw;
+  color: white;
+  font-size: .8rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bestsellerproduct {
+  background-color: rgb(255, 91, 111);
+  height: 4vh;
+  width: 8vw;
+  color: white;
+  font-size: .9rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.New-launch {
+  background-color: rgb(130, 195, 65);
+  height: 5vh;
+  width: 8vw;
+  color: white;
+  font-size: .85rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rosemarry {
+  background-color: rgb(130, 195, 65);
+  height: 4.5vh;
+  width: 12vw;
+  color: white;
+  font-size: .85rem;
+  border-top-left-radius: .2vw;
+  border-bottom-right-radius: .2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goodpromise {
+  display: flex;
+  gap: 3vw;
+}
+
+.centercontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2vw;
+}
+
+.promisecontent {
+  width: 40vw;
+}
+
+.text1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.shop {
+  background-color: rgb(0, 175, 239);
+  height: 5vh;
+  width: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .3vw;
+  color: white;
+}
+
+.pledges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 175, 239);
+  height: 5vh;
+  padding: .5vw;
+  color: rgb(0, 175, 239);
+  border-radius: .3vw;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5vw;
+}
+
+[src="https://www.youtube.com/embed/YROZybuYGUE"] {
+  border-radius: 2vw;
+}
+
+.backimg {
+  background-image: url(https://res.cloudinary.com/dujv8dius/image/upload/v1761847258/desktop_home_img_zy1k8l.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100%;
+  margin-top: 2vw;
+}
+
+.safe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vw;
+}
+
+.safeitems {
+  display: flex;
+  gap: 3vw;
+}
+
+.fixwidth {
+  width: 14vw;
+  color: rgba(0, 0, 0, 0.753);
+  line-height: 1.8vw;
+}
+
+.textcontent {
+  display: flex;
+  gap: 1.5vw;
+}
+
+.centersafeitems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vw;
+}
+
+.footer {
+  display: grid;
+  grid-template-rows: repeat(13, 1fr);
+  border: 2px solid;
+}
+
+[alt="truckimg"] {
+  height: 6vh;
+}
+
+.color {
+  color: rgba(0, 0, 0, 0.607);
+}
+
+.centerfooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vw;
+}
+
+.footer {
+  height: 147vh;
+  width: 80vw;
+  border: .1vw solid rgba(0, 0, 0, 0.250);
+}
+
+[alt="shipping"] {
+  height: 6.5vh;
+}
+
+.line {
+  height: 100%;
+  width: .1vw;
+  background-color: rgba(0, 0, 0, 0.250);
+}
+
+.footer-row1 {
+  display: flex;
+  gap: .5vw;
+  border: .1vw solid rgba(0, 0, 0, 0.250);
+}
+
+.footer-row1-col1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6vw;
+  padding: 2vw;
+  padding-left: 5vw;
+  /* border: 2px solid; */
+}
+
+[alt="Wallet"] {
+  height: 6.5vh;
+}
+
+.footer-row1-col2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2vw;
+}
+
+.footer-row1-col2-col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .6vw;
+}
+
+.contact-us {
+  height: 7vh;
+  width: 10vw;
+  border: .1vw solid blue;
+  border-radius: .5vw;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us:hover {
+  background-color: blue;
+  color: white;
+}
+
+.footer-row1-col2-col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.row2 {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  border: .1vw solid rgba(0, 0, 0, 0.250);
+}
+
+[alt="Payment"] {
+  height: 3vh;
+}
+
+.green {
+  color: rgb(101, 160, 6);
+  display: flex;
+  align-items: center;
+  gap: .5vw;
+}
+
+.footerlinks {
+  display: flex;
+  gap: 2vw;
+  justify-content: space-around;
+  padding: 2vw;
+  height: auto;
+  border: .1vw solid rgba(0, 0, 0, 0.250);
+}
+
+.row3-col1 {
+  color: rgba(0, 0, 0, 0.450);
+  line-height: 4.5vh;
+}
+
+.row3-col2 {
+  color: rgba(0, 0, 0, 0.450);
+  line-height: 4.5vh;
+}
+
+.row3-col3 {
+  color: rgba(0, 0, 0, 0.450);
+  line-height: 4.5vh;
+}
+
+[alt="bestbrandaward"] {
+  height: 30vh;
+}
+
+.row4 {
+  display: flex;
+  justify-content: center;
+  padding: 2vw;
+  align-items: center;
+  border: .1vw solid rgba(0, 0, 0, 0.250);
+}
+
+.row4-col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.storeapp {
+  display: flex;
+  gap: 1vw;
+}
+
+.socialmedialogo {
+  display: flex;
+  gap: 1.5vw;
+}
+
+[alt="facebooklogo"] {
+  height: 3.5vh;
+}
+
+.row5 {
+  border: .1vw solid rgba(0.0, 0.0, 0.0, 0.250);
+  padding: 1vw;
+  color: rgba(0, 0, 0, 0.751);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  color: rgb(0, 175, 239);
+}
